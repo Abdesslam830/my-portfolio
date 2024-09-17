@@ -33,12 +33,7 @@ cards.forEach(card => {
     });
 });
 
-// Toggle mobile navigation menu
-const menuToggle = document.querySelector('.menu-toggle');
-const navLinks = document.querySelector('nav ul');
-menuToggle?.addEventListener('click', () => {
-    navLinks.classList.toggle('open');
-});
+
 
 // Show "Back to Top" button when scrolling down
 const backToTop = document.querySelector('.back-to-top');

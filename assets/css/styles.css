@@ -721,21 +721,6 @@ nav ul {
     display: flex;
 }
 
-@media (max-width: 768px) {
-    .menu-toggle {
-        display: block;
-    }
-    
-    nav ul {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-    }
-    
-    nav ul.open {
-        display: flex;
-    }
-}
 
 /* Back to Top Button */
 .back-to-top {
