@@ -73,3 +73,6 @@ fetch('assets/data/projects.json')
         });
     })
     .catch(error => console.error('Error fetching the projects:', error));
+    document.querySelector('.navbar-toggle').addEventListener('click', function() {
+        document.querySelector('.navbar-menu').classList.toggle('active');
+    }); 

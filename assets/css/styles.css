@@ -884,3 +884,38 @@ header h1:hover {
     height: 10px;
     background-color: #3a3a3a;
 }
+/* Base styles for navigation bar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #333;
+  }
+  
+  .navbar-menu {
+    display: flex;
+    gap: 20px;
+  }
+  
+  /* Styles for mobile view */
+  @media (max-width: 768px) {
+    .navbar-menu {
+      display: none; /* Hide menu items */
+    }
+    .navbar-toggle {
+      display: block; /* Show menu toggle button */
+    }
+  }
+  
+  /* Styles for when the menu is visible */
+  .navbar-menu.active {
+    display: block; /* Show menu items */
+  }
+  
+  /* Toggle button styles */
+  .navbar-toggle {
+    display: none;
+    /* Add styles for your toggle button */
+  }
+  
