@@ -1,0 +1,886 @@
+/* General Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1b1131;
+    color: #f1f1f1;
+}
+
+/* Header */
+header {
+    background-color: #2a1b3d;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo h2 {
+    font-size: 24px;
+    color: #ff00ff;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    color: #f1f1f1;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ff00ff;
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    background: linear-gradient(to right, #ff00ff, #00ffff);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-text h1 {
+    font-size: 64px;
+    margin: 0;
+}
+
+.hero-text p {
+    font-size: 24px;
+    margin: 20px 0;
+}
+
+.cta-button {
+    padding: 10px 30px;
+    background-color: #ff0080;
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #00ffff;
+}
+
+/* Projects Grid */
+.projects {
+    padding: 50px;
+    text-align: center;
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.portfolio-card {
+    background-color: #2a1b3d;
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.portfolio-card:hover {
+    transform: scale(1.05);
+}
+
+.portfolio-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.portfolio-card h2 {
+    font-size: 24px;
+    color: #ff00ff;
+}
+
+/* About and Contact Page */
+.contacts, .resume, .about-me {
+    padding: 50px;
+    text-align: center;
+}
+
+.contacts h1, .resume h1, .about-me h1 {
+    font-size: 36px;
+    color: #ff00ff;
+}
+
+img {
+    max-width: 100%;
+    border-radius: 15px;
+}
+
+/* Footer */
+footer {
+    background-color: #2a1b3d;
+    padding: 20px;
+    text-align: center;
+}
+/* For Mobile Navigation */
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+}
+
+nav ul {
+    display: flex;
+}
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+    
+    nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    nav ul.open {
+        display: flex;
+    }
+}
+/* Back to Top Button */
+.back-to-top {
+    display: none;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #ff00ff;
+    color: white;
+    padding: 10px 15px;
+    font-size: 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.back-to-top:hover {
+    background-color: #00ffff;
+}
+.logo:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+/* Smooth Scroll */
+html {
+    scroll-behavior: smooth;
+  }
+  
+  /* Hero Section */
+  .hero {
+    opacity: 0;
+    animation: fadeIn 2s ease-in forwards;
+  }
+  
+  @keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  
+  .cta-button:hover {
+    background-color: #00ffff;
+    transform: scale(1.1);
+    transition: all 0.3s ease;
+  }
+  
+  /* Logo Animation */
+  header h1 {
+    font-size: 24px;
+    color: #ff00ff;
+    transition: all 0.3s ease;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+  }
+  
+  header h1:hover {
+    color: #00ffff;
+    transform: scale(1.2);
+  }
+/* Projects Grid */
+.projects {
+    padding: 50px;
+    text-align: center;
+  }
+  
+  .portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .portfolio-card {
+    background-color: #2a1b3d;
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .portfolio-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  }
+  
+  .portfolio-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  
+  .portfolio-card h2 {
+    font-size: 24px;
+    color: #ff00ff;
+  }
+  
+  .portfolio-card p {
+    font-size: 16px;
+    color: #cccccc;
+  }
+  
+  .portfolio-card a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    color: #00ffff;
+    text-decoration: none;
+    border: 2px solid #00ffff;
+    border-radius: 25px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .portfolio-card a:hover {
+    background-color: #00ffff;
+    color: #1b1131;
+  }
+/* Hero Section - Ensure Full-Width and Centered Alignment */
+.hero {
+    height: 100vh;
+    background: linear-gradient(to right, #ff00ff, #00ffff);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/* Hero Text */
+.hero-text h1 {
+    font-size: 4rem;
+    margin: 0;
+    color: #ffffff;
+    animation: fadeIn 2s ease-in forwards;
+}
+
+.hero-text p {
+    font-size: 1.5rem;
+    margin: 20px 0;
+    color: #f1f1f1;
+}
+
+.cta-button {
+    padding: 15px 40px;
+    background-color: #ff0080;
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #00ffff;
+    transform: scale(1.1);
+}
+
+/* Logo Animation */
+.logo h2 {
+    font-size: 2rem;
+    color: #ff00ff;
+    transition: transform 0.3s ease;
+}
+
+.logo h2:hover {
+    transform: scale(1.1);
+}
+/* Projects Page Grid Layout */
+.projects {
+    padding: 50px;
+    background-color: #1b1131;
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.portfolio-card {
+    background-color: #2a1b3d;
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.portfolio-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.portfolio-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.portfolio-card h2 {
+    font-size: 1.5rem;
+    color: #ff00ff;
+}
+
+.portfolio-card p {
+    font-size: 1rem;
+    color: #cccccc;
+}
+
+.portfolio-card a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    color: #00ffff;
+    text-decoration: none;
+    border: 2px solid #00ffff;
+    border-radius: 25px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.portfolio-card a:hover {
+    background-color: #00ffff;
+    color: #1b1131;
+}
+/* About and Contact Page Styles */
+.contacts, .resume, .about-me {
+    padding: 50px;
+    text-align: center;
+    background-color: #1b1131;
+}
+
+.contacts h1, .resume h1, .about-me h1 {
+    font-size: 2rem;
+    color: #ff00ff;
+}
+
+img {
+    max-width: 100%;
+    border-radius: 15px;
+}
+/* Smooth Scroll */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Back to Top Button */
+.back-to-top {
+    display: none;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #ff00ff;
+    color: white;
+    padding: 10px 15px;
+    font-size: 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.back-to-top:hover {
+    background-color: #00ffff;
+}
+
+/* Responsive Navigation */
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+}
+
+nav ul {
+    display: flex;
+}
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+    
+    nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    nav ul.open {
+        display: flex;
+    }
+}
+/* General Styling for About Page */
+.about-page {
+    background: linear-gradient(to right, #ff00ff, #00ffff);
+    color: #f1f1f1;
+    padding: 50px;
+    text-align: center;
+}
+
+/* About Page Header */
+.about-page h1 {
+    font-size: 3rem;
+    color: #ffffff;
+    margin-bottom: 30px;
+}
+
+/* Section Containers */
+.about-section {
+    background-color: #2a1b3d;
+    border-radius: 15px;
+    padding: 30px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Resume Section */
+.resume img {
+    max-width: 80%;
+    border-radius: 15px;
+    margin: 20px 0;
+}
+
+/* Contacts Section */
+.contacts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+/* Contact Details */
+.contacts p {
+    font-size: 1.2rem;
+    color: #f1f1f1;
+}
+
+/* About Me Section */
+.about-me {
+    font-size: 1.2rem;
+    color: #f1f1f1;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+    .about-page {
+        padding: 20px;
+    }
+
+    .resume img {
+        max-width: 100%;
+    }
+
+    .about-section {
+        padding: 20px;
+    }
+
+    .contacts p, .about-me {
+        font-size: 1rem;
+    }
+}
+/* General Styling for Portfolio Page */
+.portfolio-page {
+    background: linear-gradient(to right, #1b1131, #2a1b3d);
+    color: #f1f1f1;
+    padding: 50px;
+    text-align: center;
+}
+
+/* Portfolio Header */
+.portfolio-page h1 {
+    font-size: 3rem;
+    color: #ffffff;
+    margin-bottom: 30px;
+}
+
+/* Project Grid */
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+/* Portfolio Card */
+.portfolio-card {
+    background-color: #3a1b4d;
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.portfolio-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.portfolio-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.portfolio-card h2 {
+    font-size: 1.5rem;
+    color: #ff00ff;
+}
+
+.portfolio-card p {
+    font-size: 1rem;
+    color: #cccccc;
+}
+
+.portfolio-card a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    color: #00ffff;
+    text-decoration: none;
+    border: 2px solid #00ffff;
+    border-radius: 25px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.portfolio-card a:hover {
+    background-color: #00ffff;
+    color: #1b1131;
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+    .portfolio-page {
+        padding: 20px;
+    }
+
+    .portfolio-card img {
+        height: 120px;
+    }
+
+    .portfolio-card h2 {
+        font-size: 1.2rem;
+    }
+
+    .portfolio-card p {
+        font-size: 0.9rem;
+    }
+}
+/* General Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1b1131;
+    color: #f1f1f1;
+}
+
+/* Header */
+header {
+    background-color: #2a1b3d;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo h2 {
+    font-size: 24px;
+    color: #ff00ff;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    color: #f1f1f1;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ff00ff;
+}
+
+/* About Container */
+.about-container {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 50px;
+    gap: 20px;
+}
+
+/* Cards */
+.card {
+    background-color: #2a1b3d;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.top-left {
+    width: 100%;
+    max-width: 400px;
+    position: relative;
+}
+
+.bottom-left {
+    width: 100%;
+    max-width: 400px;
+}
+
+.right-side {
+    flex: 1;
+    max-width: 600px;
+}
+
+.card-content {
+    text-align: center;
+}
+
+.logo-small {
+    width: 80px; /* Adjust size as needed */
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.card h1 {
+    font-size: 24px;
+    color: #ff00ff;
+}
+
+.card p {
+    font-size: 16px;
+    color: #cccccc;
+}
+
+.card a {
+    color: #00ffff;
+    text-decoration: none;
+}
+
+.card a:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+footer {
+    background-color: #2a1b3d;
+    padding: 20px;
+    text-align: center;
+}
+
+/* For Mobile Navigation */
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+}
+
+nav ul {
+    display: flex;
+}
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+    
+    nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    nav ul.open {
+        display: flex;
+    }
+}
+
+/* Back to Top Button */
+.back-to-top {
+    display: none;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #ff00ff;
+    color: white;
+    padding: 10px 15px;
+    font-size: 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.back-to-top:hover {
+    background-color: #00ffff;
+}
+
+/* Smooth Scroll */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Logo Animation */
+header h1 {
+    font-size: 24px;
+    color: #ff00ff;
+    transition: all 0.3s ease;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+}
+
+header h1:hover {
+    color: #00ffff;
+    transform: scale(1.2);
+}
+
+/* Hero Section */
+.hero {
+    opacity: 0;
+    animation: fadeIn 2s ease-in forwards;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+.cta-button:hover {
+    background-color: #00ffff;
+    transform: scale(1.1);
+    transition: all 0.3s ease;
+}
+
+/* Projects Grid */
+.projects {
+    padding: 50px;
+    text-align: center;
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.portfolio-card {
+    background-color: #2a1b3d;
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.portfolio-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.portfolio-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.portfolio-card h2 {
+    font-size: 24px;
+    color: #ff00ff;
+}
+
+.portfolio-card p {
+    font-size: 16px;
+    color: #cccccc;
+}
+
+.portfolio-card a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    color: #00ffff;
+    text-decoration: none;
+    border: 2px solid #00ffff;
+    border-radius: 25px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.portfolio-card a:hover {
+    background-color: #00ffff;
+    color: #1b1131;
+}
+/* Custom scrollbar styles */
+::-webkit-scrollbar {
+    width: 10px;  /* Width of the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+    background: #3a3a3a;  /* Subtle dark gray background for the track */
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;  /* A simple, less eye-catching gray */
+    border-radius: 10px;  /* Rounded corners for a softer look */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;  /* Slightly darker when hovered */
+}
+
+/* Arrow at the top of the scrollbar */
+::-webkit-scrollbar-button:vertical:decrement {
+    background: url('data:image/svg+xml;base64,...') no-repeat center;
+    height: 10px;
+    background-color: #3a3a3a;
+}
+
+/* Arrow at the bottom of the scrollbar */
+::-webkit-scrollbar-button:vertical:increment {
+    background: url('data:image/svg+xml;base64,...') no-repeat center;
+    height: 10px;
+    background-color: #3a3a3a;
+}
